@@ -16,7 +16,8 @@ def gaussian_elimination(A, b):
     x = [0] * n
     for i in range(n - 1, -1, -1):
         s = sum(A[i][j] * x[j] for j in range(i + 1, n))
-        x[i] = (b[i] - s) / A[i][i]
+        value = (b[i] - s) / A[i][i]
+        x[i] = int(value) if value.is_integer() else value
     return x
 
 A1 = [
