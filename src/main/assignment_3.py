@@ -1,4 +1,3 @@
-
 import math
 
 # ---------- Question 1: Gaussian Elimination & Backward Substitution ----------
@@ -98,9 +97,9 @@ A3 = [
     [3, 2, 4, 0, 8]
 ]
 
-if (is_diagonally_dominant(A3) == True)
+if (is_diagonally_dominant(A3) == True):
     print("The matrix is diagonally dominant")
-else
+else:
     print("The matrix is not diagonally dominant")
 
 
@@ -139,7 +138,7 @@ A4 = [
 
 is_pd = is_symmetric(A4) and (cholesky_decomposition(A4) is not None)
 
-if (is_pd == True)
+if (is_pd == True):
     print("The matrix is positive definite")
-else
+else:
     print("The matrix is not positive definite")
