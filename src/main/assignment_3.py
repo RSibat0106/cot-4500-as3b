@@ -101,7 +101,7 @@ if (is_diagonally_dominant(A3) == True):
     print("The matrix is diagonally dominant")
 else:
     print("The matrix is not diagonally dominant")
-
+print()
 
 # ---------- Question 4: Positive Definiteness Check ----------
 def is_symmetric(A):
