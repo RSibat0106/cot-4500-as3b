@@ -139,7 +139,6 @@ A4 = [
 
 is_pd = is_symmetric(A4) and (cholesky_decomposition(A4) is not None)
 
-print("Is the positive definite?")
 if (is_pd == True)
     print("The matrix is positive definite")
 else
