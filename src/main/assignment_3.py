@@ -32,7 +32,6 @@ A1 = [
 b1 = [6, 0, -3]
 sol1 = gaussian_elimination([row[:] for row in A1], b1[:])
 
-print("Q1: Gaussian Elimination Solution:")
 print(sol1)
 print()
 
@@ -68,12 +67,14 @@ A2 = [
 L, U = lu_factorization([row[:] for row in A2])
 det_A2 = determinant_from_U(U)
 
-print("Q2: LU Factorization")
-print("Determinant of A:", det_A2)
-print("L matrix:")
+print(det_A2)
+print()
+# L matrix
 for row in L:
     print(row)
-print("U matrix:")
+print()
+
+# U matrix
 for row in U:
     print(row)
 print()
@@ -97,7 +98,6 @@ A3 = [
     [3, 2, 4, 0, 8]
 ]
 
-print("Q3: Diagonal Dominance")
 print("Is diagonally dominant?", is_diagonally_dominant(A3))
 print()
 
@@ -136,5 +136,5 @@ A4 = [
 ]
 
 is_pd = is_symmetric(A4) and (cholesky_decomposition(A4) is not None)
-print("Q4: Positive Definiteness")
+
 print("Is positive definite?", is_pd)
