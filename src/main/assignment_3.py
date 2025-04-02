@@ -17,7 +17,11 @@ def gaussian_elimination(A, b):
     for i in range(n - 1, -1, -1):
         s = sum(A[i][j] * x[j] for j in range(i + 1, n))
         value = (b[i] - s) / A[i][i]
-        x[i] = int(value) if value.is_integer() else value
+        # If it's very close to an integer, round it
+        if abs(value - round(value)) < 1e-9:
+            x[i] = int(round(value))
+        else:
+            x[i] = value
     return x
 
 A1 = [
