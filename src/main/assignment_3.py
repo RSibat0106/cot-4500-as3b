@@ -98,8 +98,10 @@ A3 = [
     [3, 2, 4, 0, 8]
 ]
 
-print("Is diagonally dominant?", is_diagonally_dominant(A3))
-print()
+if (is_diagonally_dominant(A3) == True)
+    print("The matrix is diagonally dominant")
+else
+    print("The matrix is not diagonally dominant")
 
 
 # ---------- Question 4: Positive Definiteness Check ----------
@@ -137,4 +139,8 @@ A4 = [
 
 is_pd = is_symmetric(A4) and (cholesky_decomposition(A4) is not None)
 
-print("Is positive definite?", is_pd)
+print("Is the positive definite?")
+if (is_pd == True)
+    print("The matrix is positive definite")
+else
+    print("The matrix is not positive definite")
